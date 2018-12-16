@@ -1,0 +1,39 @@
+
+#introduction {
+  padding: 100px 0;
+
+  & h1 {
+    font-size: calc(24px + 5vw);
+    text-align: center;
+    line-height: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-family: 'Libre Baskerville', serif;
+
+    & span {
+      display: block;
+      font-size: calc(24px + .5vw);
+      font-weight: bold;
+      text-transform: none;
+      line-height: 1em;
+      font-family: 'Lato', sans-serif;
+    }
+
+  }
+
+  & img {
+    max-height: 300px;
+    max-width: 100%;
+    display: block;
+    margin: 40px auto;
+    clip-path: circle(50% at 50% 50%);
+  }
+
+  & p {
+    font-size: calc(22px + .2vw);
+    line-height: 1.6em;
+    text-align: center;
+  }
+
+}

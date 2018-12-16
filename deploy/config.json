@@ -1,0 +1,13 @@
+{
+  "build":   "build",
+  "default": "staging",
+  "nginx": "react-winston.conf",
+  "targets": {
+    "staging": {
+      "user": "ec2-user",
+      "host": "joshmagness.com",
+      "destination": "/srv/http/react-winston",
+      "config": "deploy/staging"
+    }
+  }
+}
