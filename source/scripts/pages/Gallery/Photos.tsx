@@ -1,46 +1,107 @@
-//@ts-ignore
-require('styles/photos.css');
-
 import React from 'react';
-import { Asset, Category } from './';
+import styled from 'styled-components';
+import { Maybe, Gallery_Asset, GalleryType_Category } from 'types.d';
 
-type GalleryProps = {
-  images: Asset[] | null;
-  active: Category | null;
-};
+const GridImageDiv = styled.div`
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 80vw;
+  grid-column: span 12;
 
-const GalleryImages: React.FC<GalleryProps> = ({ images, active }) => {
+  @media (min-width: 768px) {
+    height: 35vw;
+    grid-column: span 6;
+  }
+
+  & span {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+  }
+`;
+
+const GridDiv = styled.div`
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  padding-bottom: 40px;
+`;
+
+const PhotosDiv = styled.section`
+  position: relative;
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 50px;
+    width: 70vw;
+  }
+
+  & h1 {
+    position: fixed;
+    font-size: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    color: #8f8f8f;
+    font-family: 'Libre Baskerville', serif;
+    z-index: 999;
+
+    @media (min-width: 768px) {
+      left: calc(30vw + 1px);
+    }
+  }
+`;
+
+const GalleryImages = ({
+  images,
+  active,
+}: {
+  images: Maybe<Array<Gallery_Asset>>;
+  active: Maybe<GalleryType_Category>;
+}) => {
   if (images && active) {
     if (!Array.isArray(images)) return null;
 
-    const filtered: Asset[] = images?.reduce(
-      (arr: Asset[], category: Asset) => {
-        category?.galleryCategory?.forEach(cat => {
-          if (cat.id === active.id) arr.push(category);
-        });
-        return arr;
-      },
-      [],
-    );
+    const filtered = images.reduce((arr: Array<Gallery_Asset>, image) => {
+      const shouldBeAdded = image?.galleryCategory?.find(
+        cat => cat?.id === active.id,
+      );
+      if (shouldBeAdded) arr.push(image);
+      return arr;
+    }, []);
 
     return (
-      <div id="photos">
+      <PhotosDiv>
         <div>
           <h1>{active.title}</h1>
-          <div className="grid">
-            {filtered.map((item, i) => {
+          <GridDiv>
+            {filtered.map(item => {
               const styles = {
-                backgroundImage: `url( ${item.url} )`,
+                backgroundImage: `url( ${item?.url} )`,
               };
               return (
-                <div className="grid-image" key={`Photos-${i}`} style={styles}>
+                <GridImageDiv key={`Photos-${item.url}`} style={styles}>
                   <span>{item?.gallerySummary}</span>
-                </div>
+                </GridImageDiv>
               );
             })}
-          </div>
+          </GridDiv>
         </div>
-      </div>
+      </PhotosDiv>
     );
   }
 

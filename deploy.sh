@@ -1,0 +1,1 @@
+rsync -L -ave ssh --delete --exclude .git --exclude .env --exclude storage --exclude web/uploads --exclude .gitignore --exclude .DS_Store --exclude deploy.sh  /Users/magnessjo/Personal/sites/winston/craft/*  magness:/srv/http/winston/craft

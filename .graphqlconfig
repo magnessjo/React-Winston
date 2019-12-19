@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "winston": {
+      "schemaPath": "public_schema.graphql",
+      "extensions": {
+        "endpoints": {
+          "dev": "http://winston.localhost.dev/api"
+        }
+      }
+    }
+  }
+}
