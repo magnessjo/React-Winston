@@ -1,0 +1,16 @@
+fieldLayouts:
+  e15fd942-d378-40a6-a1f1-6340c5844292:
+    tabs:
+      -
+        fields:
+          29f883c0-10a9-4a64-b734-757d94c9bef7: # Introduction Image
+            required: false
+            sortOrder: 1
+          789d0d3b-0908-4168-b2c8-63474ae11cb3: # Introduction Summary
+            required: false
+            sortOrder: 2
+        name: Introduction
+        sortOrder: 1
+handle: introduction
+name: Introduction
+sortOrder: 1

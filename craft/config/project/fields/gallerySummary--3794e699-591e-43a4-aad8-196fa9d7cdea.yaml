@@ -1,0 +1,16 @@
+contentColumnType: text
+fieldGroup: 5b05b4c2-c509-44cd-88ec-2bbbfacaa63d
+handle: gallerySummary
+instructions: ''
+name: 'Gallery Summary'
+searchable: true
+settings:
+  charLimit: ''
+  code: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

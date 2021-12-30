@@ -1,0 +1,8 @@
+handle: introduction
+hasUrls: true
+name: Introduction
+settings:
+  path: '@basePath/introduction'
+sortOrder: 3
+type: craft\volumes\Local
+url: '@web/uploads/introduction'

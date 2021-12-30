@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 2
+template: /index.twig
+uriParts:
+  - gallery
+uriPattern: gallery

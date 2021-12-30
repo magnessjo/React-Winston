@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: 30fd149b-85b7-4846-a8d6-d0867d647848
+handle: aboutType
+instructions: ''
+name: 'About Type'
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Section
+        -
+          - value
+          - section
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Intro
+        -
+          - value
+          - intro
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

@@ -5,9 +5,7 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-module.exports = env => {
-  var cssLoaderOptions = {};
-
+module.exports = (env) => {
   var plugins = [
     new CopyWebpackPlugin([
       { from: 'uploads/**/*', to: '', context: 'source/assets/' },

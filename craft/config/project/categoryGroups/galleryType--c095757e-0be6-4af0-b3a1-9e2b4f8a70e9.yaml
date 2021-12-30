@@ -1,0 +1,10 @@
+handle: galleryType
+name: 'Gallery Type'
+siteSettings:
+  1fc60690-a375-4ad7-ae4b-6e5efd31588f:
+    hasUrls: true
+    template: gallery-type/_category
+    uriFormat: 'gallery-type/{slug}'
+structure:
+  maxLevels: null
+  uid: 2961837a-9f45-4466-8674-cde03a8de1f9

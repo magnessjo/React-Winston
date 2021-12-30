@@ -1,0 +1,8 @@
+handle: about
+hasUrls: true
+name: About
+settings:
+  path: '@basePath/about'
+sortOrder: 2
+type: craft\volumes\Local
+url: '@web/uploads/about'

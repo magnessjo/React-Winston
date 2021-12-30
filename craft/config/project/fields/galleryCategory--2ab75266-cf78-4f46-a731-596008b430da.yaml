@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 5b05b4c2-c509-44cd-88ec-2bbbfacaa63d
+handle: galleryCategory
+instructions: ''
+name: 'Gallery Category'
+searchable: true
+settings:
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  source: 'group:c095757e-0be6-4af0-b3a1-9e2b4f8a70e9'
+  sources: '*'
+  targetSiteId: null
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

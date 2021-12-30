@@ -1,0 +1,18 @@
+enableVersioning: true
+handle: about
+name: About
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  1fc60690-a375-4ad7-ae4b-6e5efd31588f:
+    enabledByDefault: true
+    hasUrls: true
+    template: about/_entry
+    uriFormat: 'about/{slug}'
+structure:
+  maxLevels: 1
+  uid: 09588bf1-0bb6-45c2-9c70-26210115ef08
+type: structure

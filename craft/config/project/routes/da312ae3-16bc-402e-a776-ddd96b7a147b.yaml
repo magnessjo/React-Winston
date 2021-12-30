@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 1
+template: /index.twig
+uriParts:
+  - about
+uriPattern: about

@@ -1,0 +1,21 @@
+fieldLayouts:
+  4f3da035-4c82-4296-8cc7-6ae1e7bce453:
+    tabs:
+      -
+        fields:
+          2ab75266-cf78-4f46-a731-596008b430da: # Gallery Category
+            required: false
+            sortOrder: 1
+          3794e699-591e-43a4-aad8-196fa9d7cdea: # Gallery Summary
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+handle: gallery
+hasUrls: true
+name: Gallery
+settings:
+  path: '@basePath/gallery'
+sortOrder: 1
+type: craft\volumes\Local
+url: '@web/uploads/gallery'

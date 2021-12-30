@@ -1,4 +1,6 @@
 /.env
 /.idea
 /vendor
+/storage
+/templates
 .DS_Store

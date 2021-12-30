@@ -1,0 +1,8 @@
+baseUrl: '@web/'
+handle: default
+hasUrls: true
+language: en-US
+name: 'Winston React'
+primary: true
+siteGroup: e92da3e4-71e0-40f1-bb30-ed367478ec05
+sortOrder: 1
